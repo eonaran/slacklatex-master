@@ -47,4 +47,4 @@ def str2png(input_string, work_dir):
     subprocess.check_call(['convert', '-density', '300', 'out.pdf', '-quality', '100', '-sharpen', '0x1.0', 'out.png'], cwd=work_dir, stdout=None, stderr=None)
 
 if __name__=="__main__":
-    app.run(host = '0.0.0.0', port=5000)
+    app.run()
