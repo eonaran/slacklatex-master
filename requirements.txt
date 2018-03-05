@@ -1,9 +1,6 @@
-flask==0.12
-backports.shutil-get-terminal-size==1.0.0
-gprof2dot==2017.9.19
-pathlib==1.0.1
-pew==1.1.2
-pipenv==11.0.2
-shutilwhich==1.1.0
-virtualenv==15.1.0
-virtualenv-clone==0.3.0
+click==6.7
+Flask==0.12.2
+itsdangerous==0.24
+Jinja2==2.10
+MarkupSafe==1.0
+Werkzeug==0.14.1
