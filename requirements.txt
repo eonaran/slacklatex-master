@@ -1,4 +1,4 @@
-Flask==0.12
+flask==0.12
 backports.shutil-get-terminal-size==1.0.0
 gprof2dot==2017.9.19
 pathlib==1.0.1
