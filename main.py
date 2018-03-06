@@ -16,7 +16,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def render_latex():
-    if request.form['token'] != SLASH_COMMAND_TOKEN:
+    if request.form['token'] == SLASH_COMMAND_TOKEN:
         return Response("NOT AUTHORIZED" + str(request.values), 403)
     with tempfile.TemporaryDirectory() as work_dir:
         try:
