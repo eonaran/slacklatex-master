@@ -32,7 +32,7 @@ def render_latex():
         #payload['channels'] = [request.form['channel_id']]
         #r = py3reqs.post(out_url, params=payload, files=files)
         #r.raise_for_status()
-        return jsonify(response_type = "in_channel" , file_name = "out.png", content_type = "image/png")
+        return jsonify(response_type = "in_channel" , file_name = "out.png", content_type = "image/png", content_url = "os.path.join(work_dir, 'out.png')")
     return ""
 
 
