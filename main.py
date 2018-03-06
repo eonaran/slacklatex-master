@@ -24,7 +24,7 @@ def render_latex():
         except Exception as e:
             print(e)
             return "Invalid LaTeX?"
-        out_url = "https://slack.com/api/files.upload"
+        out_url = request.form['response_url']
         payload = {}
         files = {'file':open(os.path.join(work_dir, 'out.png'), 'rb')}
         payload['token'] = API_TOKEN
