@@ -5,7 +5,7 @@ import os
 import subprocess
 import tempfile
 
-from flask import Flask, Response, request
+from flask import Flask, Response, request, jsonify
 import requests as py3reqs
 
 config = configparser.ConfigParser()
@@ -24,16 +24,17 @@ def render_latex():
         except Exception as e:
             print(e)
             return "Invalid LaTeX?"
-        out_url = request.form['response_url']
-        payload = {}
-	return Response("anani")
+        #out_url = request.form['response_url']
+        #payload = {}
         files = {'file':open(os.path.join(work_dir, 'out.png'), 'rb')}
-        payload['token'] = API_TOKEN
-        payload['filename'] = 'LaTeX.png'
-        payload['initial_comment'] = request.form['text']
-        payload['channels'] = [request.form['channel_id']]
-        r = py3reqs.post(out_url, params=payload, files=files)
-        r.raise_for_status()
+        #payload['token'] = API_TOKEN
+        #payload['filename'] = 'LaTeX.png'
+        #payload['initial_comment'] = request.form['text']
+        #payload['channels'] = [request.form['channel_id']]
+        #r = py3reqs.post(out_url, params=payload, files=files)
+        #r.raise_for_status()
+	return jsonify( response_type = in_channel, text="It's 80 degrees right now."  )
+	   
     return ""
 
 
