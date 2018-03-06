@@ -33,7 +33,7 @@ def render_latex():
         #r = py3reqs.post(out_url, params=payload, files=files)
         #r.raise_for_status()
         #return str(os.stat(os.path.join(work_dir, 'out.png')).st_size)
-        return jsonify(response_type = "in_channel" , attachments = [{"fallback": "tex", "text": os.path.join('https://slacklatexeo.herokuapp.com',  os.path.join(work_dir, 'out.png'))  }]  )
+        return jsonify(response_type = "in_channel" , attachments = [{"fallback": "tex", "text": 'https://slacklatexeo.herokuapp.com' + os.path.join(work_dir, 'out.png'))  }]  )
     return ""
 
 
