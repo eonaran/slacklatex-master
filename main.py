@@ -25,7 +25,7 @@ def render_latex():
             print(e)
             return "Invalid LaTeX?"
         #payload = {}
-        files = {'file':open(os.path.join(work_dir, 'out.png'), 'rb')}
+        #files = {'file':open(os.path.join(work_dir, 'out.png'), 'rb')}
         #payload['token'] = API_TOKEN
         #payload['filename'] = 'LaTeX.png'
         #payload['initial_comment'] = request.form['text']
