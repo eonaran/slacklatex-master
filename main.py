@@ -5,8 +5,7 @@ import os
 import subprocess
 import tempfile
 
-from flask import Flask, Response, request 
-#, jsonify
+from flask import Flask, Response, request, jsonify
 import requests as py3reqs
 
 config = configparser.ConfigParser()
