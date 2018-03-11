@@ -5,7 +5,8 @@ import os
 import subprocess
 import tempfile
 
-from flask import Flask, Response, request, jsonify
+from flask import Flask, Response, request
+#, jsonify
 import requests as py3reqs
 
 config = configparser.ConfigParser()
@@ -32,7 +33,7 @@ def render_latex():
         #payload['channels'] = [request.form['channel_id']]
         #r = py3reqs.post(out_url, params=payload, files=files)
         #r.raise_for_status()
-        #return str(os.stat(os.path.join(work_dir, 'out.png')).st_size)
+        return str(os.stat(os.path.join(work_dir, 'out.png')).st_size)
         #return jsonify(response_type = "in_channel" , attachments = [{"fallback": "tex", "image_url": "https://slacklatexeo.herokuapp.com" + os.path.join(work_dir, 'out.png')  }]  )
         #return jsonify(response_type = "in_channel" , attachments = [{"text": str(os.path.join(work_dir, "out.png")) }] )
         #return jsonify(response_type = "in_channel" , attachments = [{"text": "", "image_url": "https://slacklatexeo.herokuapp.com/slack.png"}])
